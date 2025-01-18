@@ -1,9 +1,27 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
+import { RouterModule, RouterOutlet } from '@angular/router';
+import { GalleryComponent } from './gallery/gallery.component';
+import { ArtworkDetailComponent } from './artwork-detail/artwork-detail.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [
+    CommonModule,
+    FormsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCardModule,
+    MatListModule,
+    RouterModule,
+    RouterOutlet
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -1,0 +1,7 @@
+<div class="gallery">
+  <mat-card *ngFor="let artwork of artworks" (click)="selectArtwork(artwork.id)">
+    <img mat-card-image [src]="artwork.thumbnailUrl" alt="{{ artwork.title }}">
+    <mat-card-title>{{ artwork.title }}</mat-card-title>
+    <mat-card-subtitle>{{ artwork.author }}</mat-card-subtitle>
+  </mat-card>
+</div>

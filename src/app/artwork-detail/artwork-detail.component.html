@@ -1,0 +1,8 @@
+<div *ngIf="artwork">
+  <img [src]="artwork.imageUrl" alt="{{ artwork.title }}">
+  <h2>{{ artwork.title }}</h2>
+  <p><strong>Автор:</strong> {{ artwork.author }}</p>
+  <p><strong>Год создания:</strong> {{ artwork.year }}</p>
+  <p><strong>Размеры:</strong> {{ artwork.dimensions }}</p>
+  <p><strong>Местоположение:</strong> {{ artwork.location }}</p>
+</div>
