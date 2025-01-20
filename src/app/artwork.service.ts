@@ -23,9 +23,19 @@ export class ArtworkService {
       author: 'Vincent van Gogh',
       dimensions: '73.7 cm × 92.1 cm',
       location: 'Museum of Modern Art, New York City',
-      thumbnailUrl: '/src/images/starry-night_thumbnail.jpg',
-      imageUrl: '/src/images/starry-night.jpg'
+      thumbnailUrl: '/src/app/assets/images/starry-night_thumbnail.jpg',
+      imageUrl: '/src/app/assets/images/starry-night.jpg'
     },
+    {
+      id:2,
+      title:'Bedroom',
+      year:1889,
+      author:'Vincent van Gogh',
+      dimensions: '',
+      location: '',
+      thumbnailUrl:'src/app/assets/images/Bedroom-oil-canvas-Vincent-van-Gogh-Art-1889_thumbnail.webp',
+      imageUrl: 'src/app/assets/images/Bedroom-oil-canvas-Vincent-van-Gogh-Art-1889.webp'
+    }
     // Добавьте больше картин здесь
   ];
 

@@ -22,6 +22,8 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
+    AppComponent,
+    ArtworkComponent,
     RouterModule.forRoot(routes)
   ],
   providers: [ArtworkService],

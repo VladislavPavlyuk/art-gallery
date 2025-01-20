@@ -8,6 +8,7 @@ import { MatListModule } from '@angular/material/list';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ArtworkDetailComponent } from './artwork-detail/artwork-detail.component';
+import { ArtworkComponent } from "./artwork/artwork.component";
 
 @Component({
   selector: 'app-root',
@@ -20,7 +21,10 @@ import { ArtworkDetailComponent } from './artwork-detail/artwork-detail.componen
     MatCardModule,
     MatListModule,
     RouterModule,
-    RouterOutlet
+    RouterOutlet,
+    GalleryComponent,
+    ArtworkComponent,
+    ArtworkDetailComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
