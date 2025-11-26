@@ -1,8 +1,69 @@
-<div *ngIf="artwork">
-  <img [src]="artwork.imageUrl" alt="{{ artwork.title }}">
-  <h2>{{ artwork.title }}</h2>
-  <p><strong>Автор:</strong> {{ artwork.author }}</p>
-  <p><strong>Год создания:</strong> {{ artwork.year }}</p>
-  <p><strong>Размеры:</strong> {{ artwork.dimensions }}</p>
-  <p><strong>Местоположение:</strong> {{ artwork.location }}</p>
+<div class="detail-container">
+  <div *ngIf="error" class="error-container">
+    <mat-card class="error-card">
+      <mat-card-content>
+        <h2>Ошибка</h2>
+        <p>{{ error }}</p>
+        <button mat-raised-button color="primary" (click)="goBack()">
+          <mat-icon>arrow_back</mat-icon>
+          Вернуться в галерею
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div *ngIf="artwork && !error" class="artwork-detail">
+    <button mat-raised-button color="primary" (click)="goBack()" class="back-button">
+      <mat-icon>arrow_back</mat-icon>
+      Назад к галерее
+    </button>
+    
+    <mat-card class="detail-card">
+      <div class="image-container">
+        <img 
+          [appImageLoader]="artwork.imageUrl"
+          [alt]="artwork.title"
+          class="artwork-image">
+      </div>
+      
+      <mat-card-header>
+        <mat-card-title class="artwork-title">{{ artwork.title }}</mat-card-title>
+        <mat-card-subtitle class="artwork-subtitle">{{ artwork.author }}</mat-card-subtitle>
+      </mat-card-header>
+      
+      <mat-card-content class="artwork-info">
+        <div class="info-item">
+          <mat-icon class="info-icon">person</mat-icon>
+          <div class="info-content">
+            <span class="info-label">Автор:</span>
+            <span class="info-value">{{ artwork.author }}</span>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <mat-icon class="info-icon">calendar_today</mat-icon>
+          <div class="info-content">
+            <span class="info-label">Год создания:</span>
+            <span class="info-value">{{ artwork.year }}</span>
+          </div>
+        </div>
+        
+        <div class="info-item" *ngIf="artwork.dimensions">
+          <mat-icon class="info-icon">straighten</mat-icon>
+          <div class="info-content">
+            <span class="info-label">Размеры:</span>
+            <span class="info-value">{{ artwork.dimensions }}</span>
+          </div>
+        </div>
+        
+        <div class="info-item" *ngIf="artwork.location">
+          <mat-icon class="info-icon">location_on</mat-icon>
+          <div class="info-content">
+            <span class="info-label">Местоположение:</span>
+            <span class="info-value">{{ artwork.location }}</span>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>

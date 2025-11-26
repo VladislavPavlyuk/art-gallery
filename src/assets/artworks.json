@@ -1,0 +1,195 @@
+{
+  "artworks": [
+    {
+      "id": 1,
+      "title": "Starry Night",
+      "year": 1889,
+      "author": "Vincent van Gogh",
+      "dimensions": "73.7 cm × 92.1 cm",
+      "location": "Museum of Modern Art, New York City",
+      "thumbnailUrl": "assets/images/starry-night.jpg",
+      "imageUrl": "assets/images/starry-night.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Bedroom",
+      "year": 1889,
+      "author": "Vincent van Gogh",
+      "dimensions": "72 cm × 90 cm",
+      "location": "Musée d'Orsay, Paris",
+      "thumbnailUrl": "assets/images/Bedroom-oil-canvas-Vincent-van-Gogh-Art-1889.webp",
+      "imageUrl": "assets/images/Bedroom-oil-canvas-Vincent-van-Gogh-Art-1889.webp"
+    },
+    {
+      "id": 3,
+      "title": "Sunflowers",
+      "year": 1888,
+      "author": "Vincent van Gogh",
+      "dimensions": "92 cm × 73 cm",
+      "location": "National Gallery, London",
+      "thumbnailUrl": "assets/images/painting-Vincent-Van-Gogh-Sunflowers-canvas-Oil.webp",
+      "imageUrl": "assets/images/painting-Vincent-Van-Gogh-Sunflowers-canvas-Oil.webp"
+    },
+    {
+      "id": 4,
+      "title": "Detail Sunflowers",
+      "year": 1888,
+      "author": "Vincent van Gogh",
+      "dimensions": "92 cm × 73 cm",
+      "location": "Van Gogh Museum, Amsterdam",
+      "thumbnailUrl": "assets/images/Detail-Sunflowers-oil-painting-artist-Vincent-van-1888.webp",
+      "imageUrl": "assets/images/Detail-Sunflowers-oil-painting-artist-Vincent-van-1888.webp"
+    },
+    {
+      "id": 5,
+      "title": "The Night Café",
+      "year": 1888,
+      "author": "Vincent van Gogh",
+      "dimensions": "72.4 cm × 92.1 cm",
+      "location": "Yale University Art Gallery, New Haven",
+      "thumbnailUrl": "assets/images/Vincent-van-Gogh-The-Night-Cafe-1888-Yale-University-Art-Museum.webp",
+      "imageUrl": "assets/images/Vincent-van-Gogh-The-Night-Cafe-1888-Yale-University-Art-Museum.webp"
+    },
+    {
+      "id": 6,
+      "title": "The Potato Eaters",
+      "year": 1885,
+      "author": "Vincent van Gogh",
+      "dimensions": "82 cm × 114 cm",
+      "location": "Van Gogh Museum, Amsterdam",
+      "thumbnailUrl": "assets/images/Vincent-van-Gogh-The-Potato-Eaters-1885-Van-Gogh-Museum-Amsterdam.webp",
+      "imageUrl": "assets/images/Vincent-van-Gogh-The-Potato-Eaters-1885-Van-Gogh-Museum-Amsterdam.webp"
+    },
+    {
+      "id": 7,
+      "title": "Cypresses",
+      "year": 1889,
+      "author": "Vincent van Gogh",
+      "dimensions": "93 cm × 74 cm",
+      "location": "Metropolitan Museum of Art, New York",
+      "thumbnailUrl": "assets/images/Cypresses-oil-canvas-Vincent-van-Gogh-New-1889.webp",
+      "imageUrl": "assets/images/Cypresses-oil-canvas-Vincent-van-Gogh-New-1889.webp"
+    },
+    {
+      "id": 8,
+      "title": "Wheatfield with Cypresses",
+      "year": 1889,
+      "author": "Vincent van Gogh",
+      "dimensions": "72.5 cm × 91.5 cm",
+      "location": "Metropolitan Museum of Art, New York",
+      "thumbnailUrl": "assets/images/Wheatfield-oil-canvas-Cypresses-Vincent-van-Gogh-1889.webp",
+      "imageUrl": "assets/images/Wheatfield-oil-canvas-Cypresses-Vincent-van-Gogh-1889.webp"
+    },
+    {
+      "id": 9,
+      "title": "Wheatfield with Crows",
+      "year": 1890,
+      "author": "Vincent van Gogh",
+      "dimensions": "50.5 cm × 103 cm",
+      "location": "Van Gogh Museum, Amsterdam",
+      "thumbnailUrl": "assets/images/Wheatfield-Crows-oil-canvas-Vincent-van-Gogh-1890.webp",
+      "imageUrl": "assets/images/Wheatfield-Crows-oil-canvas-Vincent-van-Gogh-1890.webp"
+    },
+    {
+      "id": 10,
+      "title": "Self-Portrait",
+      "year": 1889,
+      "author": "Vincent van Gogh",
+      "dimensions": "65 cm × 54 cm",
+      "location": "Musée d'Orsay, Paris",
+      "thumbnailUrl": "assets/images/Self-Portrait-canvas-Vincent-van-Gogh-National-Gallery-1889.webp",
+      "imageUrl": "assets/images/Self-Portrait-canvas-Vincent-van-Gogh-National-Gallery-1889.webp"
+    },
+    {
+      "id": 11,
+      "title": "Self-Portrait",
+      "year": 1887,
+      "author": "Vincent van Gogh",
+      "dimensions": "42 cm × 33.7 cm",
+      "location": "Rijksmuseum, Amsterdam",
+      "thumbnailUrl": "assets/images/Self-Portrait-Vincent-van-Gogh-Rijksmuseum-Amsterdam-1887.webp",
+      "imageUrl": "assets/images/Self-Portrait-Vincent-van-Gogh-Rijksmuseum-Amsterdam-1887.webp"
+    },
+    {
+      "id": 12,
+      "title": "Portrait of Joseph Roulin",
+      "year": 1889,
+      "author": "Vincent van Gogh",
+      "dimensions": "65 cm × 54 cm",
+      "location": "Museum of Modern Art, New York",
+      "thumbnailUrl": "assets/images/Portrait-Joseph-Roulin-oil-canvas-France-Arles-1889.webp",
+      "imageUrl": "assets/images/Portrait-Joseph-Roulin-oil-canvas-France-Arles-1889.webp"
+    },
+    {
+      "id": 13,
+      "title": "La Berceuse",
+      "year": 1889,
+      "author": "Vincent van Gogh",
+      "dimensions": "92 cm × 73 cm",
+      "location": "Museum of Fine Arts, Boston",
+      "thumbnailUrl": "assets/images/La-Berceuse-canvas-Vincent-van-Gogh-New-1889.webp",
+      "imageUrl": "assets/images/La-Berceuse-canvas-Vincent-van-Gogh-New-1889.webp"
+    },
+    {
+      "id": 14,
+      "title": "L'Arlésienne",
+      "year": 1888,
+      "author": "Vincent van Gogh",
+      "dimensions": "93 cm × 74 cm",
+      "location": "Musée d'Orsay, Paris",
+      "thumbnailUrl": "assets/images/LArlesienne-oil-canvas-Madame-Joseph-Michel-Ginoux-Vincent.webp",
+      "imageUrl": "assets/images/LArlesienne-oil-canvas-Madame-Joseph-Michel-Ginoux-Vincent.webp"
+    },
+    {
+      "id": 15,
+      "title": "Landscape at Saint-Rémy",
+      "year": 1889,
+      "author": "Vincent van Gogh",
+      "dimensions": "73 cm × 92 cm",
+      "location": "Private Collection",
+      "thumbnailUrl": "assets/images/Landscape-oil-canvas-Saint-Remy-Vincent-van-Gogh-1889.webp",
+      "imageUrl": "assets/images/Landscape-oil-canvas-Saint-Remy-Vincent-van-Gogh-1889.webp"
+    },
+    {
+      "id": 16,
+      "title": "Large Plane Trees",
+      "year": 1889,
+      "author": "Vincent van Gogh",
+      "dimensions": "73.4 cm × 92.6 cm",
+      "location": "Cleveland Museum of Art",
+      "thumbnailUrl": "assets/images/Large-Plane-Trees-Road-Menders-at-Saint-Remy-Vincent-Van-Gough-1889-Cleveland-Art-Museum.webp",
+      "imageUrl": "assets/images/Large-Plane-Trees-Road-Menders-at-Saint-Remy-Vincent-Van-Gough-1889-Cleveland-Art-Museum.webp"
+    },
+    {
+      "id": 17,
+      "title": "Old Tower in the Fields",
+      "year": 1884,
+      "author": "Vincent van Gogh",
+      "dimensions": "34.5 cm × 42 cm",
+      "location": "Van Gogh Museum, Amsterdam",
+      "thumbnailUrl": "assets/images/Old-Tower-canvas-oil-cardboard-Fields-Vincent-1884.webp",
+      "imageUrl": "assets/images/Old-Tower-canvas-oil-cardboard-Fields-Vincent-1884.webp"
+    },
+    {
+      "id": 18,
+      "title": "Bouquet of Flowers in a Vase",
+      "year": 1887,
+      "author": "Vincent van Gogh",
+      "dimensions": "61 cm × 38 cm",
+      "location": "Metropolitan Museum of Art, New York",
+      "thumbnailUrl": "assets/images/Bouquet-Flowers-oil-Vase-canvas-Vincent-van.webp",
+      "imageUrl": "assets/images/Bouquet-Flowers-oil-Vase-canvas-Vincent-van.webp"
+    },
+    {
+      "id": 19,
+      "title": "Fishing in Spring",
+      "year": 1887,
+      "author": "Vincent van Gogh",
+      "dimensions": "50.5 cm × 60 cm",
+      "location": "Art Institute of Chicago",
+      "thumbnailUrl": "assets/images/fishing-in-spring-pont-de-clichy-vincent-van-gogh.webp",
+      "imageUrl": "assets/images/fishing-in-spring-pont-de-clichy-vincent-van-gogh.webp"
+    }
+  ]
+}
+

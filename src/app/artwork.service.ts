@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable, map, shareReplay } from 'rxjs';
 
 export interface Artwork {
   id: number;
@@ -11,39 +13,32 @@ export interface Artwork {
   imageUrl: string;
 }
 
+interface ArtworksResponse {
+  artworks: Artwork[];
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class ArtworkService {
-  private artworks: Artwork[] = [
-    {
-      id: 1,
-      title: 'Starry Night',
-      year: 1889,
-      author: 'Vincent van Gogh',
-      dimensions: '73.7 cm × 92.1 cm',
-      location: 'Museum of Modern Art, New York City',
-      thumbnailUrl: '/src/app/assets/images/starry-night_thumbnail.jpg',
-      imageUrl: '/src/app/assets/images/starry-night.jpg'
-    },
-    {
-      id:2,
-      title:'Bedroom',
-      year:1889,
-      author:'Vincent van Gogh',
-      dimensions: '',
-      location: '',
-      thumbnailUrl:'src/app/assets/images/Bedroom-oil-canvas-Vincent-van-Gogh-Art-1889_thumbnail.webp',
-      imageUrl: 'src/app/assets/images/Bedroom-oil-canvas-Vincent-van-Gogh-Art-1889.webp'
-    }
-    // Добавьте больше картин здесь
-  ];
+  private artworksUrl = 'assets/artworks.json';
+  private artworksCache$?: Observable<Artwork[]>;
 
-  getArtworks(): Artwork[] {
-    return this.artworks;
+  constructor(private http: HttpClient) { }
+
+  getArtworks(): Observable<Artwork[]> {
+    if (!this.artworksCache$) {
+      this.artworksCache$ = this.http.get<ArtworksResponse>(this.artworksUrl).pipe(
+        map(response => response.artworks),
+        shareReplay(1) // Кэшируем результат для переиспользования
+      );
+    }
+    return this.artworksCache$;
   }
 
-  getArtworkById(id: number): Artwork | undefined {
-    return this.artworks.find(artwork => artwork.id === id);
+  getArtworkById(id: number): Observable<Artwork | undefined> {
+    return this.getArtworks().pipe(
+      map(artworks => artworks.find(artwork => artwork.id === id))
+    );
   }
 }

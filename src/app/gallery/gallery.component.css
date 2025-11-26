@@ -1,0 +1,367 @@
+.gallery-container {
+  padding: 20px;
+  padding-bottom: 250px; /* Отступ для нижней панели с миниатюрами */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Индикатор загрузки */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  gap: 20px;
+}
+
+.loading-text {
+  color: #666;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Секция с большим изображением */
+.main-image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  min-height: auto;
+  padding-top: 20px;
+}
+
+.artwork-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.artwork-layout.layout-left {
+  flex-direction: row;
+}
+
+.artwork-layout.layout-right {
+  flex-direction: row-reverse;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.artwork-image-wrapper {
+  flex: 1;
+  min-width: 0;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-image {
+  max-width: 100%;
+  max-height: 60vh;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.artwork-info-wrapper {
+  flex: 0 0 400px;
+  min-width: 300px;
+}
+
+.info-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  height: 100%;
+}
+
+.main-title {
+  font-size: 28px;
+  font-weight: 400;
+  color: #333;
+  text-align: left;
+  margin-top: 16px;
+}
+
+.main-subtitle {
+  font-size: 16px;
+  color: #666;
+  text-align: left;
+  font-style: italic;
+}
+
+.artwork-details {
+  padding: 24px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.detail-icon {
+  color: #1976d2;
+  margin-right: 16px;
+  margin-top: 4px;
+}
+
+.detail-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label {
+  font-weight: 500;
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-value {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Секция с маленькими изображениями */
+.thumbnail-section {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 100;
+}
+
+.thumbnail-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.scroll-button {
+  flex-shrink: 0;
+}
+
+.scroll-button:disabled {
+  opacity: 0.3;
+}
+
+.thumbnail-container {
+  flex: 1;
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  padding: 10px 0;
+  -webkit-overflow-scrolling: touch;
+  /* Ограничиваем видимую область до 5 элементов */
+  width: calc(5 * (200px + 15px) - 15px);
+  max-width: 100%;
+}
+
+.thumbnail-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.thumbnail-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.thumbnail-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.thumbnail-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.thumbnail-item {
+  flex: 0 0 calc(20% - 12px);
+  min-width: 150px;
+  max-width: 200px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-color: #1976d2;
+}
+
+.thumbnail-item.active {
+  border-color: #1976d2;
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.4);
+  transform: translateY(-5px);
+}
+
+.thumbnail-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+.thumbnail-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.thumbnail-item:hover .thumbnail-overlay,
+.thumbnail-item.active .thumbnail-overlay {
+  opacity: 1;
+}
+
+.thumbnail-title {
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Стили для состояний загрузки изображений */
+.image-loading {
+  opacity: 0.6;
+  filter: blur(2px);
+}
+
+.image-loaded {
+  opacity: 1;
+  filter: none;
+  transition: opacity 0.3s ease;
+}
+
+.image-error {
+  opacity: 0.5;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .gallery-container {
+    padding: 10px;
+    padding-bottom: 220px;
+  }
+
+  .main-image-section {
+    min-height: 300px;
+    margin-bottom: 20px;
+  }
+
+  .artwork-layout {
+    flex-direction: column !important;
+    gap: 20px;
+  }
+
+  .artwork-image-wrapper {
+    min-height: 300px;
+    padding: 10px;
+  }
+
+  .main-image {
+    max-height: 40vh;
+  }
+
+  .artwork-info-wrapper {
+    flex: 1;
+    min-width: 100%;
+  }
+
+  .main-title {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .main-subtitle {
+    text-align: center;
+  }
+
+  .thumbnail-section {
+    padding: 10px;
+  }
+
+  .thumbnail-container {
+    width: calc(3 * (150px + 15px) - 15px);
+  }
+
+  .thumbnail-item {
+    flex: 0 0 150px;
+    min-width: 120px;
+    max-width: 150px;
+  }
+
+  .thumbnail-image {
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-container {
+    padding-bottom: 200px;
+  }
+
+  .thumbnail-container {
+    width: calc(2 * (120px + 15px) - 15px);
+  }
+
+  .thumbnail-item {
+    flex: 0 0 120px;
+    min-width: 100px;
+    max-width: 120px;
+  }
+
+  .thumbnail-image {
+    height: 100px;
+  }
+}

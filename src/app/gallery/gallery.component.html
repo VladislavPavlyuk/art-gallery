@@ -1,6 +1,103 @@
-<div class="gallery">
-  <mat-card *ngFor="let artwork of artworks" (click)="selectArtwork(artwork.id)">
-    <img mat-card-image [src]="artwork.thumbnailUrl" alt="{{ artwork.title }}">
-    <mat-card-title>{{ artwork.title }}</mat-card-title>
-  </mat-card>
+<div class="gallery-container">
+  <!-- Индикатор загрузки -->
+  <div class="loading-container" *ngIf="isLoading">
+    <mat-spinner diameter="60"></mat-spinner>
+    <p class="loading-text">Загрузка картин...</p>
+  </div>
+
+  <!-- Большое изображение в верхней центральной части -->
+  <div class="main-image-section" *ngIf="selectedArtwork && !isLoading">
+    <div class="artwork-layout" [class.layout-left]="infoPosition === 'left'" [class.layout-right]="infoPosition === 'right'">
+      <!-- Изображение -->
+      <div class="artwork-image-wrapper">
+        <img 
+          [appImageLoader]="selectedArtwork.imageUrl"
+          [alt]="selectedArtwork.title"
+          class="main-image">
+      </div>
+      
+      <!-- Информация о картине -->
+      <div class="artwork-info-wrapper">
+        <mat-card class="info-card">
+          <mat-card-header>
+            <mat-card-title class="main-title">{{ selectedArtwork.title }}</mat-card-title>
+            <mat-card-subtitle class="main-subtitle">{{ selectedArtwork.author }}, {{ selectedArtwork.year }}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content class="artwork-details">
+            <div class="detail-item">
+              <mat-icon class="detail-icon">person</mat-icon>
+              <div class="detail-content">
+                <span class="detail-label">Автор:</span>
+                <span class="detail-value">{{ selectedArtwork.author }}</span>
+              </div>
+            </div>
+            
+            <div class="detail-item">
+              <mat-icon class="detail-icon">calendar_today</mat-icon>
+              <div class="detail-content">
+                <span class="detail-label">Год создания:</span>
+                <span class="detail-value">{{ selectedArtwork.year }}</span>
+              </div>
+            </div>
+            
+            <div class="detail-item" *ngIf="selectedArtwork.dimensions">
+              <mat-icon class="detail-icon">straighten</mat-icon>
+              <div class="detail-content">
+                <span class="detail-label">Размеры:</span>
+                <span class="detail-value">{{ selectedArtwork.dimensions }}</span>
+              </div>
+            </div>
+            
+            <div class="detail-item" *ngIf="selectedArtwork.location">
+              <mat-icon class="detail-icon">location_on</mat-icon>
+              <div class="detail-content">
+                <span class="detail-label">Местоположение:</span>
+                <span class="detail-value">{{ selectedArtwork.location }}</span>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+
+  <!-- Горизонтальная прокручиваемая галерея маленьких изображений внизу -->
+  <div class="thumbnail-section" *ngIf="!isLoading">
+    <div class="thumbnail-controls">
+      <button 
+        mat-icon-button 
+        color="primary" 
+        (click)="scrollLeft()"
+        [disabled]="!canScrollLeft()"
+        class="scroll-button scroll-left">
+        <mat-icon>chevron_left</mat-icon>
+      </button>
+      
+      <div class="thumbnail-container" #thumbnailContainer>
+        <div 
+          *ngFor="let artwork of artworks" 
+          class="thumbnail-item"
+          [class.active]="selectedArtwork?.id === artwork.id"
+          (click)="selectArtwork(artwork)">
+          <img 
+            [src]="artwork.thumbnailUrl"
+            [alt]="artwork.title"
+            class="thumbnail-image"
+            (error)="onThumbnailError($event, artwork)">
+          <div class="thumbnail-overlay">
+            <span class="thumbnail-title">{{ artwork.title }}</span>
+          </div>
+        </div>
+      </div>
+      
+      <button 
+        mat-icon-button 
+        color="primary" 
+        (click)="scrollRight()"
+        [disabled]="!canScrollRight()"
+        class="scroll-button scroll-right">
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+    </div>
+  </div>
 </div>

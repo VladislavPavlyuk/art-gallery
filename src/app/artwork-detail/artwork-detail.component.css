@@ -1,0 +1,170 @@
+.detail-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.error-card {
+  text-align: center;
+  padding: 40px;
+}
+
+.error-card h2 {
+  color: #f44336;
+  margin-bottom: 20px;
+}
+
+.error-card p {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.artwork-detail {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.back-button {
+  margin-bottom: 20px;
+}
+
+.back-button mat-icon {
+  margin-right: 8px;
+}
+
+.detail-card {
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+  width: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  padding: 20px;
+}
+
+.artwork-image {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+mat-card-header {
+  padding: 24px 24px 16px 24px;
+}
+
+.artwork-title {
+  font-size: 32px;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.artwork-subtitle {
+  font-size: 18px;
+  color: #666;
+  font-style: italic;
+}
+
+.artwork-info {
+  padding: 24px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.info-icon {
+  color: #1976d2;
+  margin-right: 16px;
+  margin-top: 4px;
+}
+
+.info-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-label {
+  font-weight: 500;
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-value {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.image-loading {
+  opacity: 0.6;
+  filter: blur(2px);
+}
+
+.image-loaded {
+  opacity: 1;
+  filter: none;
+  transition: opacity 0.3s ease;
+}
+
+.image-error {
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .detail-container {
+    padding: 10px;
+  }
+  
+  .artwork-title {
+    font-size: 24px;
+  }
+  
+  .image-container {
+    min-height: 300px;
+    padding: 10px;
+  }
+  
+  .artwork-image {
+    max-height: 50vh;
+  }
+}
